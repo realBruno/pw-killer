@@ -11,3 +11,76 @@ int main(void)
     printf("%s", string());
     return 0;
 }
+
+
+
+///
+
+    // ABOUT THE PASSWORD
+    /*printf("\nInclude characters to the password.\nKeep in mind that "
+            "the more types you include, the less likely it is for"
+            " the program to find the correct password.\n");
+
+    har include_numbers;
+    printf("Include numbers? (y/n): ");
+    scanf("%c", &include_numbers);
+    
+    clearbuffer();
+
+    char include_upper;
+    printf("Include uppercase letters? (y/n): ");
+    scanf("%c", &include_upper);
+
+    clearbuffer();
+
+    char include_lower;
+    printf("Include lowercase letters? (y/n): ");
+    scanf("%c", &include_lower);
+
+    clearbuffer();
+
+    char include_special;
+    printf("Include special characters? (y/n): ");
+    scanf("%c", &include_special);
+
+    clearbuffer();
+ */
+
+
+
+ /* 
+    char use_wordlist;
+    printf("Use a wordlist? (y/n) ");
+    scanf("%c", &use_wordlist);
+    use_wordlist = tolower(use_wordlist);
+
+    clearbuffer();
+
+    switch(use_wordlist)
+    {
+        case 'y':
+            char wordlist_path[MAX_PATH_SIZE];
+            printf("Insert wordlist path (%d char. max): ", MAX_PATH_SIZE - 1);
+            scanf("%s", wordlist_path);
+            clearbuffer();
+            FILE *open_wordlist = fopen(wordlist_path, "r");
+
+
+            break;
+        case 'n':
+            break;
+        default:
+            printf("Invalid option. Considering it to be \'n\'.\n");
+    } 
+*/
+
+
+for (int i = 1; i != 0;)
+    {
+        for (int j = 0; j < 10000000000, i != 0; j++)
+        {
+            sprintf(&command[len_command], "%d", j);
+            i = system(command);
+            password = j;
+        }
+    }
