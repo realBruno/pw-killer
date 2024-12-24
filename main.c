@@ -9,11 +9,10 @@
 #include <unistd.h>
 #include <time.h>
 #include <string.h>
+#include "./headers/clearbuffer.h"
 
 #define MAX_PATH_SIZE 51
 #define SYSTEM_ARGUMENT 201
-
-void generate_password(int x);
 
 int main(void)
 {   
@@ -25,9 +24,7 @@ int main(void)
     char file_path[MAX_PATH_SIZE];
     scanf("%s", file_path);
     
-    char c;
-    while ((c = getchar()) != '\n' && c != EOF) // clears buffer
-        ;
+    clearbuffer();
     
     printf("Insert where to extract file (%d char. max): ", MAX_PATH_SIZE - 1);
     char extraction_path[MAX_PATH_SIZE];
@@ -50,51 +47,36 @@ int main(void)
     printf("Include numbers? (y/n): ");
     scanf("%c", &include_numbers);
     
-    while ((c = getchar()) != '\n' && c != EOF)
-        ;
+    clearbuffer();
 
     char include_upper;
     printf("Include uppercase letters? (y/n): ");
     scanf("%c", &include_upper);
 
-    while ((c = getchar()) != '\n' && c != EOF)
-        ;
+    clearbuffer();
 
     char include_lower;
     printf("Include lowercase letters? (y/n): ");
     scanf("%c", &include_lower);
 
-    while ((c = getchar()) != '\n' && c != EOF)
-        ;
+    clearbuffer();
 
     char include_special;
     printf("Include special characters? (y/n): ");
     scanf("%c", &include_special);
 
-    while ((c = getchar()) != '\n' && c != EOF)
-        ;
+    clearbuffer();
 
     int up_to;
     printf("Insert maximum length the password may reach (0-50): ");
     scanf("%d", &up_to);
 
-    while ((c = getchar()) != '\n' && c != EOF)
-        ;
+    clearbuffer();
 
-    strncat(command, "123", command_size);
     while (system(command) != 0)
     {
         ;
     }
 
     return 0;
-}
-
-// FUNCTION DEFINITION
-void generate_password(int x) // x is the max length the password can reach
-{                            // aka "up_to"
-    int password_len = rand() % x;
-    char password[password_len];
-
-    
 }

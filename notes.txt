@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+char *string()
+{
+    char *p = "string";
+    return p;
+}   
+
+int main(void)
+{
+    printf("%s", string());
+    return 0;
+}
