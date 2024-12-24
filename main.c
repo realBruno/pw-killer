@@ -43,16 +43,16 @@ int main(void)
     strncat(command, " -p", command_size);
 
     int len_command = strlen(command);
-    long long password = 0;
-    for (int k = 1; password <= 10000000000, k != 0; )
+    long long variable = 0;
+    for (int k = 1; variable <= 10000000000, k != 0; )
     {
-        sprintf(&command[len_command], "%lld", password++);
+        sprintf(&command[len_command], "%lld", variable++);
         k = system(command);
     }
     
-    password--;
+    variable--;
     char save_password;
-    printf("Password found: \'%lld\'", password);
+    printf("Password found: \'%lld\'", variable);
     printf("\nSave password to file? (y/n) ");
     scanf("%c", &save_password);
     save_password == tolower(save_password);
@@ -62,7 +62,7 @@ int main(void)
     if (save_password == 'y')
     {
         FILE *output = fopen("password.txt", "w");
-        fprintf(output, "%lld", password);
+        fprintf(output, "%lld", variable);
         fclose(output);
         printf("Password saved successfully. Check \'password.txt\'.\n");
     }
@@ -73,5 +73,3 @@ int main(void)
 
     return 0;
 }
-
-// ge
